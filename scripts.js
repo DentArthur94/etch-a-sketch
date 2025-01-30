@@ -48,9 +48,11 @@ function highlightCell() {
     const cells = document.querySelectorAll(".column")
 
     cells.forEach( (cell) => {
-        cell.addEventListener("mouseover", (event) => {
-            let target = event.target ; 
-            target.id = "target-div"; //allow to toggle the proper CSS properties on hover
+        cell.addEventListener("mouseover", () => {
+            cell.style.backgroundColor = "black";
+            if (cell.style.opacity < 1) { //increase opacity by 1/10 on each mouseover
+            cell.style.opacity = +cell.style.opacity + 0.1;
+            }
         })
     } )
 }

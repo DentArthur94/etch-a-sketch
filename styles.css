@@ -37,13 +37,7 @@ header {
     flex : 1;
 }
 
-div {
-    border: red 1px solid;
-}
 
-#target-div:hover {
-    background-color: blue;
-}
 
 #new-grid-btn {
     width: 120px;
