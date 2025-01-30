@@ -2,15 +2,20 @@
 
 
 initGrid();
+createNewGrid();
 
-const newGridBtn = document.querySelector("#new-grid-btn");
+function createNewGrid() {
+    const newGridBtn = document.querySelector("#new-grid-btn");
 
-newGridBtn.addEventListener("click" , (gridSize) => {
-    gridSize = getValidSize();
-    removeGrid() ;
-    createGrid(gridSize,gridSize);
-    highlightCell();
-    });
+    newGridBtn.addEventListener("click" , (gridSize) => {
+        gridSize = getValidSize();
+        removeGrid() ;
+        createGrid(gridSize,gridSize);
+        highlightCell();
+        });
+}
+
+
 
 
 
