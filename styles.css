@@ -30,3 +30,6 @@ div {
     border: red 1px solid;
 }
 
+#target-div:hover {
+    background-color: blue;
+}

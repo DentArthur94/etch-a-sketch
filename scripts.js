@@ -2,6 +2,8 @@
 
 const grid = document.querySelector("#grid");
 createGrid(16,16);
+highlightCell();
+
 
 
 function createGrid(nbOfRows, nbOfColumns) {
@@ -16,4 +18,16 @@ function createGrid(nbOfRows, nbOfColumns) {
         row.append(column);
         }
     }
+}
+
+
+function highlightCell() {
+    const cells = document.querySelectorAll(".column")
+
+    cells.forEach( (cell) => {
+        cell.addEventListener("mouseover", (event) => {
+            let target = event.target ; 
+            target.id = "target-div"; //allow to toggle the proper CSS properties on hover
+        })
+    } )
 }
